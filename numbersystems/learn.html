@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Number Systems | Number System Converter</title>
+    <meta name="description" content="Learn about different number systems including binary, decimal, octal, and hexadecimal. Understand how to convert between number systems.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔢</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <div class="logo-container">
+                <div class="logo">🔢</div>
+                <h1>Learn Number Systems</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Converter</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="learn.html" class="active">Learn</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-toggle-checkbox">
+                <label for="theme-toggle-checkbox" class="toggle-label">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="toggle-ball"></div>
+                </label>
+            </div>
+        </header>
+
+        <main>
+            <div class="learn-card">
+                <div class="learn-header">
+                    <h2>Understanding Number Systems</h2>
+                </div>
+                
+                <div class="learn-section">
+                    <h3>What are Number Systems?</h3>
+                    <p>Number systems are mathematical systems for expressing numbers. Different number systems use different symbols and have different bases (or radices). The base determines how many unique digits are used in the system.</p>
+                </div>
+                
+                <div class="learn-section">
+                    <h3>Decimal Number System (Base-10)</h3>
+                    <p>The decimal number system is the most commonly used number system in everyday life. It uses 10 digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9.</p>
+                    <p>In the decimal system, each position represents a power of 10. For example, in the number 423:</p>
+                    <ul>
+                        <li>3 is in the ones position (3 × 10<sup>0</sup> = 3)</li>
+                        <li>2 is in the tens position (2 × 10<sup>1</sup> = 20)</li>
+                        <li>4 is in the hundreds position (4 × 10<sup>2</sup> = 400)</li>
+                    </ul>
+                    <p>So 423 = 400 + 20 + 3 = 4 × 10<sup>2</sup> + 2 × 10<sup>1</sup> + 3 × 10<sup>0</sup></p>
+                </div>
+                
+                <div class="learn-section">
+                    <h3>Binary Number System (Base-2)</h3>
+                    <p>The binary number system uses only two digits: 0 and 1. It is the foundation of digital computing because electronic components can easily represent two states: on (1) and off (0).</p>
+                    <p>In the binary system, each position represents a power of 2. For example, in the binary number 1011:</p>
+                    <ul>
+                        <li>1 is in the ones position (1 × 2<sup>0</sup> = 1)</li>
+                        <li>1 is in the twos position (1 × 2<sup>1</sup> = 2)</li>
+                        <li>0 is in the fours position (0 × 2<sup>2</sup> = 0)</li>
+                        <li>1 is in the eights position (1 × 2<sup>3</sup> = 8)</li>
+                    </ul>
+                    <p>So binary 1011 = 8 + 2 + 1 = 11 in decimal.</p>
+                </div>
+                
+                <div class="learn-section">
+                    <h3>Octal Number System (Base-8)</h3>
+                    <p>The octal number system uses 8 digits: 0, 1, 2, 3, 4, 5, 6, and 7. It was commonly used in computing as a more concise way to represent binary data.</p>
+                    <p>In the octal system, each position represents a power of 8. For example, in the octal number 427:</p>
+                    <ul>
+                        <li>7 is in the ones position (7 × 8<sup>0</sup> = 7)</li>
+                        <li>2 is in the eights position (2 × 8<sup>1</sup> = 16)</li>
+                        <li>4 is in the sixty-fours position (4 × 8<sup>2</sup> = 256)</li>
+                    </ul>
+                    <p>So octal 427 = 256 + 16 + 7 = 279 in decimal.</p>
+                </div>
+                
+                <div class="learn-section">
+                    <h3>Hexadecimal Number System (Base-16)</h3>
+                    <p>The hexadecimal (or hex) number system uses 16 digits: 0-9 and A-F (where A=10, B=11, C=12, D=13, E=14, and F=15). It's widely used in computing to represent binary data more concisely.</p>
+                    <p>In the hexadecimal system, each position represents a power of 16. For example, in the hexadecimal number 2AF:</p>
+                    <ul>
+                        <li>F is in the ones position (15 × 16<sup>0</sup> = 15)</li>
+                        <li>A is in the sixteens position (10 × 16<sup>1</sup> = 160)</li>
+                        <li>2 is in the two-hundred-and-fifty-sixes position (2 × 16<sup>2</sup> = 512)</li>
+                    </ul>
+                    <p>So hexadecimal 2AF = 512 + 160 + 15 = 687 in decimal.</p>
+                </div>
+                
+                <div class="learn-section">
+                    <h3>Converting Between Number Systems</h3>
+                    <p>There are several methods to convert numbers between different number systems:</p>
+                    
+                    <h4>Decimal to Other Bases</h4>
+                    <p>To convert from decimal to another base, divide the decimal number by the target base repeatedly until the quotient becomes 0, then read the remainders from bottom to top.</p>
+                    
+                    <h4>Other Bases to Decimal</h4>
+                    <p>To convert from another base to decimal, multiply each digit by its corresponding power of the base and sum the results.</p>
+                    
+                    <h4>Binary to Octal/Hexadecimal</h4>
+                    <p>To convert binary to octal, group the binary digits into sets of three (starting from the right) and convert each group to its octal equivalent. For example, binary 110101 becomes 110 101 = 65 in octal.</p>
+                    <p>To convert binary to hexadecimal, group the binary digits into sets of four (starting from the right) and convert each group to its hexadecimal equivalent. For example, binary 110101 becomes 0011 0101 = 35 in hexadecimal.</p>
+                    <button id="back-to-top" class="back-to-top">Back to Top</button>
+        </main>
+
+        <section id="about" class="about-section">
+            <div class="section-card">
+                <h2>About This Tool</h2>
+                <p>This Number System Converter is designed to help students, programmers, and anyone working with different number systems. It provides instant conversions between decimal, binary, octal, hexadecimal, ASCII, and Unicode.</p>
+                <p>Whether you're learning about number systems, working on a programming project, or just need a quick conversion, this tool makes the process simple and efficient.</p>
+            </div>
+        </section>
+        <section id="contact" class="contact-section">
+            <div class="section-card">
+                <h2>Contact Us</h2>
+                <p>Have suggestions or found a bug? We'd love to hear from you!</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>numbersystems.coverter@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Created with ❤️ | © 2025 Number System Converter</p>
+        </footer>
+    </div>
+
+    <script src="learn.js"></script>
+    </body>
+    </html>
+<!-- Add inside each number system section -->

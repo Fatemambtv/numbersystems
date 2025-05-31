@@ -1,1 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number System Converter - Convert Between Binary, Decimal, Hex and More</title>
+    <meta name="google-site-verification" content="0BHWTG-zSMTlhV0ss-3LLmT5tR9ZDhRiJmm3hHairBU" />
+    <meta name="description" content="Convert between binary, decimal, hexadecimal and more instantly.">
+    <meta name="keywords" content="binary, decimal, hexadecimal, number system converter, online tool">
+    <meta name="author" content="YourSiteName">
+    <meta name="description" content="Free online tool to convert between decimal, binary, octal, hexadecimal, ASCII, and Unicode number systems. Learn about different number systems and test your knowledge.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔢</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <div class="logo-container">
+                <div class="logo">🔢</div>
+                <h1>Number System Converter</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Converter</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-toggle-checkbox">
+                <label for="theme-toggle-checkbox" class="toggle-label">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="toggle-ball"></div>
+                </label>
+            </div>
+        </header>
 
+        <section class="hero-section">
+            <div class="hero-content">
+                <h2>Convert Between Number Systems</h2>
+                <p>Easily transform values between binary, decimal, hexadecimal, octal, ASCII, and Unicode with our powerful conversion tool.</p>
+            </div>
+        </section>
+
+        <main>
+            <div class="converter-card">
+                <div class="converter-header">
+                    <h2>Conversion Tool</h2>
+                </div>
+                
+                <div class="conversion-type">
+                    <label for="conversion-select">Select Conversion Type:</label>
+                    <select id="conversion-select">
+                        <option value="decimal">Decimal Conversions</option>
+                        <option value="binary">Binary Conversions</option>
+                        <option value="octal">Octal Conversions</option>
+                        <option value="hexadecimal">Hexadecimal Conversions</option>
+                        <option value="ascii">ASCII ↔ Binary</option>
+                        <option value="unicode">Unicode ↔ Binary</option>
+                    </select>
+                </div>
+
+                <div class="input-section">
+                    <label for="input-value">Enter Value:</label>
+                    <input type="text" id="input-value" placeholder="Enter a value to convert">
+                    <div class="error-message" id="error-message"></div>
+                </div>
+
+                <div class="buttons">
+                    <button id="convert-btn" class="primary-btn"><i class="fas fa-exchange-alt"></i> Convert</button>
+                    <!-- Add after the convert button -->
+                    <div id="conversion-spinner" class="spinner"></div>
+                    <button id="reset-btn" class="secondary-btn"><i class="fas fa-redo"></i> Reset</button>
+                    <button id="back-to-top" class="back-to-top">Back to Top</button>
+                </div>
+
+                <div class="results-section">
+                    <h3>Results</h3>
+                    <div class="result-container" id="decimal-result">
+                        <div class="result-label">
+                            Decimal:
+                            <span class="tooltip-icon" data-tooltip="Base-10 number system using digits 0-9. The standard number system used in everyday life.">
+                                <i class="fas fa-info-circle"></i>
+                            </span>
+                        </div>
+                        <div class="result-value" id="decimal-value">-</div>
+                        <button class="copy-btn" data-result="decimal-value" title="Copy result">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                    <div class="result-container" id="binary-result">
+                        <div class="result-label">
+                            Binary:
+                            <span class="tooltip-icon" data-tooltip="Base-2 number system using only 0 and 1. Used by computers for all internal operations.">
+                                <i class="fas fa-info-circle"></i>
+                            </span>
+                        </div>
+                        <div class="result-value" id="binary-value">-</div>
+                        <button class="copy-btn" data-result="binary-value" title="Copy result">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                    <div class="result-container" id="octal-result">
+                        <div class="result-label">
+                            Octal:
+                            <span class="tooltip-icon" data-tooltip="Base-8 number system using digits 0-7. Historically used in computing as a more concise way to represent binary.">
+                                <i class="fas fa-info-circle"></i>
+                            </span>
+                        </div>
+                        <div class="result-value" id="octal-value">-</div>
+                        <button class="copy-btn" data-result="octal-value" title="Copy result">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                    <div class="result-container" id="hexadecimal-result">
+                        <div class="result-label">
+                            Hexadecimal:
+                            <span class="tooltip-icon" data-tooltip="Base-16 number system using digits 0-9 and letters A-F. Commonly used in computing for memory addresses and color codes.">
+                                <i class="fas fa-info-circle"></i>
+                            </span>
+                        </div>
+                        <div class="result-value" id="hexadecimal-value">-</div>
+                        <button class="copy-btn" data-result="hexadecimal-value" title="Copy result">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                    <div class="result-container" id="ascii-result">
+                        <div class="result-label">
+                            ASCII/Text:
+                            <span class="tooltip-icon" data-tooltip="ASCII is a character encoding standard that assigns numerical values to letters, digits, and other characters. Each character is represented by 7 or 8 bits.">
+                                <i class="fas fa-info-circle"></i>
+                            </span>
+                        </div>
+                        <div class="result-value" id="ascii-value">-</div>
+                        <button class="copy-btn" data-result="ascii-value" title="Copy result">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <section id="about" class="about-section">
+            <div class="section-card">
+                <h2>About This Tool</h2>
+                <p>This Number System Converter is designed to help students, programmers, and anyone working with different number systems. It provides instant conversions between decimal, binary, octal, hexadecimal, ASCII, and Unicode.</p>
+                <p>Whether you're learning about number systems, working on a programming project, or just need a quick conversion, this tool makes the process simple and efficient.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="section-card">
+                <h2>Contact Us</h2>
+                <p>Have suggestions or found a bug? We'd love to hear from you!</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>numbersystems.coverter@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="quiz.html">Quiz</a>
+                    <a href="learn.html">Learn</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <p>© 2025 Number System Converter | Created with ❤️</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
