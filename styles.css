@@ -748,3 +748,14 @@ button {
 .back-to-top:hover {
     background-color: #555;
 }
+.hero-link {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+  margin: 0 8px;
+}
+
+.hero-link:hover {
+  color: #e0e0e0;
+  text-decoration: none;
+}
