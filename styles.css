@@ -748,14 +748,26 @@ button {
 .back-to-top:hover {
     background-color: #555;
 }
-.hero-link {
-  color: #fff;
+.hero-content h1 {
+  color: #ffffff;
+  font-size: 28px;
   font-weight: 600;
-  text-decoration: underline;
-  margin: 0 8px;
 }
 
-.hero-link:hover {
-  color: #e0e0e0;
+.hero-content p {
+  color: #ffffff;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.hero-content a {
+  color: #ffeb3b;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.hero-content a:hover {
+  color: #ffffff;
   text-decoration: none;
 }
+
